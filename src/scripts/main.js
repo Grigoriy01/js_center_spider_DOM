@@ -2,7 +2,12 @@
 
 // write code here
 const spider = document.querySelector('.spider');
-const weallSize = 400;
+const wall = document.querySelector('.wall');
 
-spider.style.top = `${weallSize / 2 - 50 / 2}px `;
-spider.style.left = `${weallSize / 2 - 50 / 2}px `;
+const spiderWidth = spider.offsetWidth;
+const wallWidth = wall.offsetWidth;
+
+const centerPos = wallWidth / 2 - spiderWidth / 2;
+
+spider.style.top = `${centerPos}px `;
+spider.style.left = `${centerPos}px `;
